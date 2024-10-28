@@ -1,7 +1,7 @@
-import { PageContainer } from '@ant-design/pro-components';
-import { useModel } from '@umijs/max';
-import { Card, theme } from 'antd';
-import React from 'react';
+import { PageContainer } from "@ant-design/pro-components";
+import { useModel } from "@umijs/max";
+import { Card, theme } from "antd";
+import React from "react";
 
 /**
  * 每个单独的卡片，为了复用样式抽成了组件
@@ -23,32 +23,32 @@ const InfoCard: React.FC<{
       style={{
         backgroundColor: token.colorBgContainer,
         boxShadow: token.boxShadow,
-        borderRadius: '8px',
-        fontSize: '14px',
+        borderRadius: "8px",
+        fontSize: "14px",
         color: token.colorTextSecondary,
-        lineHeight: '22px',
-        padding: '16px 19px',
-        minWidth: '220px',
+        lineHeight: "22px",
+        padding: "16px 19px",
+        minWidth: "220px",
         flex: 1,
       }}
     >
       <div
         style={{
-          display: 'flex',
-          gap: '4px',
-          alignItems: 'center',
+          display: "flex",
+          gap: "4px",
+          alignItems: "center",
         }}
       >
         <div
           style={{
             width: 48,
             height: 48,
-            lineHeight: '22px',
-            backgroundSize: '100%',
-            textAlign: 'center',
-            padding: '8px 16px 16px 12px',
-            color: '#FFF',
-            fontWeight: 'bold',
+            lineHeight: "22px",
+            backgroundSize: "100%",
+            textAlign: "center",
+            padding: "8px 16px 16px 12px",
+            color: "#FFF",
+            fontWeight: "bold",
             backgroundImage:
               "url('https://gw.alipayobjects.com/zos/bmw-prod/daaf8d50-8e6d-4251-905d-676a24ddfa12.svg')",
           }}
@@ -57,7 +57,7 @@ const InfoCard: React.FC<{
         </div>
         <div
           style={{
-            fontSize: '16px',
+            fontSize: "16px",
             color: token.colorText,
             paddingBottom: 8,
           }}
@@ -67,17 +67,17 @@ const InfoCard: React.FC<{
       </div>
       <div
         style={{
-          fontSize: '14px',
+          fontSize: "14px",
           color: token.colorTextSecondary,
-          textAlign: 'justify',
-          lineHeight: '22px',
+          textAlign: "justify",
+          lineHeight: "22px",
           marginBottom: 8,
         }}
       >
         {desc}
       </div>
       <a href={href} target="_blank" rel="noreferrer">
-        了解更多 {'>'}
+        了解更多 {">"}
       </a>
     </div>
   );
@@ -85,36 +85,34 @@ const InfoCard: React.FC<{
 
 const Welcome: React.FC = () => {
   const { token } = theme.useToken();
-  const { initialState } = useModel('@@initialState');
+  const { initialState } = useModel("@@initialState");
   return (
-    <PageContainer
-    >
+    <PageContainer>
       <Card
         style={{
           borderRadius: 8,
-          height: '90vh',
+          height: "90vh",
         }}
         bodyStyle={{
           backgroundImage:
-            initialState?.settings?.navTheme === 'realDark'
-              ? 'background-image: linear-gradient(75deg, #1A1B1F 0%, #191C1F 100%)'
-              : 'background-image: linear-gradient(75deg, #FBFDFF 0%, #F5F7FF 100%)',
+            initialState?.settings?.navTheme === "realDark"
+              ? "background-image: linear-gradient(75deg, #1A1B1F 0%, #191C1F 100%)"
+              : "background-image: linear-gradient(75deg, #FBFDFF 0%, #F5F7FF 100%)",
         }}
       >
         <div
           style={{
-            backgroundPosition: '90% 10%',
-            backgroundRepeat: 'no-repeat',
-            backgroundSize: '15% auto',
-            backgroundImage:
-              "url('logo.svg')",
+            backgroundPosition: "90% 10%",
+            backgroundRepeat: "no-repeat",
+            backgroundSize: "15% auto",
+            backgroundImage: "url('logo.svg')",
           }}
         >
           <div
             style={{
-              fontSize: '30px',
-              marginLeft: '5vh',
-              marginTop: '5vh',
+              fontSize: "30px",
+              marginLeft: "5vh",
+              marginTop: "5vh",
               color: token.colorTextHeading,
             }}
           >
@@ -122,28 +120,34 @@ const Welcome: React.FC = () => {
           </div>
           <p
             style={{
-              fontSize: '20px',
+              fontSize: "20px",
               color: token.colorTextSecondary,
-              lineHeight: '27px',
-              marginTop: '5vh',
-              marginLeft: '5vh',
+              lineHeight: "27px",
+              marginTop: "5vh",
+              marginLeft: "5vh",
               marginBottom: 32,
-              width: '65%',
+              width: "65%",
             }}
           >
-            
-欢迎使用 FedLog 联邦日志异常检测系统！FedLog 是一个先进的基于联邦学习的日志异常检测平台，专为现代企业和组织设计。它通过独特的分布式数据处理技术，使您能够在不收集原始日志数据的情况下，深入分析和检测日志中的异常行为。
-FedLog 的设计理念充分考虑了数据隐私。通过在本地设备上进行数据处理，FedLog 能够确保敏感信息不被泄露，同时依然提供高效的异常检测功能。 <br/><br/>
-FedLog 能够帮助您及时发现和应对异常情况，从而减少系统故障和服务中断的风险，确保您的用户体验始终如一。&nbsp; 
-无论您是从事 IT 运营、网络安全、还是数据分析，FedLog 都将为您提供一套强大的工具，帮助您在快速变化的环境中保持竞争优势。立即加入我们，体验 FedLog 如何帮助您优化日志管理、增强数据安全和提升整体业务效率！
+            欢迎使用 FedLog 联邦日志异常检测系统！FedLog
+            是一个先进的基于联邦学习的日志异常检测平台，专为现代企业和组织设计。它通过独特的分布式数据处理技术，使您能够在不收集原始日志数据的情况下，深入分析和检测日志中的异常行为。
+            FedLog
+            的设计理念充分考虑了数据隐私。通过在本地设备上进行数据处理，FedLog
+            能够确保敏感信息不被泄露，同时依然提供高效的异常检测功能。 <br />
+            <br />
+            FedLog
+            能够帮助您及时发现和应对异常情况，从而减少系统故障和服务中断的风险，确保您的用户体验始终如一。&nbsp;
+            无论您是从事 IT 运营、网络安全、还是数据分析，FedLog
+            都将为您提供一套强大的工具，帮助您在快速变化的环境中保持竞争优势。立即加入我们，体验
+            FedLog 如何帮助您优化日志管理、增强数据安全和提升整体业务效率！
           </p>
           <div
             style={{
-              display: 'flex',
-              flexWrap: 'wrap',
+              display: "flex",
+              flexWrap: "wrap",
               gap: 16,
-              marginTop: '10vh',
-              marginInline: '5vh'
+              marginTop: "10vh",
+              marginInline: "5vh",
             }}
           >
             <InfoCard
