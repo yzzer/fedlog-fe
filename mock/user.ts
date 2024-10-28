@@ -45,7 +45,7 @@ export default {
       success: true,
       data: {
         name: 'youzhangzheng',
-        avatar: 'https://gw.alipayobjects.com/zos/antfincdn/XAosXuNZyF/BiazfanxmamNRoxxVxka.png',
+        avatar: 'https://avatars.githubusercontent.com/u/40891597?v=4',
         userid: '00000001',
         email: 'antdesign@alipay.com',
         signature: '海纳百川，有容乃大',

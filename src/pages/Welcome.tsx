@@ -103,11 +103,11 @@ const Welcome: React.FC = () => {
       >
         <div
           style={{
-            backgroundPosition: '100% -30%',
+            backgroundPosition: '90% 10%',
             backgroundRepeat: 'no-repeat',
-            backgroundSize: '25% auto',
+            backgroundSize: '15% auto',
             backgroundImage:
-              "url('https://gw.alipayobjects.com/mdn/rms_a9745b/afts/img/A*BuFmQqsB2iAAAAAAAAAAAAAAARQnAQ')",
+              "url('logo.svg')",
           }}
         >
           <div

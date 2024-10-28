@@ -33,7 +33,7 @@ export function getRightRenderContent (opts: {
               className="umi-plugin-layout-avatar"
               src={
                 opts.initialState?.avatar ||
-                "https://gw.alipayobjects.com/zos/antfincdn/XAosXuNZyF/BiazfanxmamNRoxxVxka.png"
+                "https://avatars.githubusercontent.com/u/40891597?v=4"
               }
               alt="avatar"
             />
