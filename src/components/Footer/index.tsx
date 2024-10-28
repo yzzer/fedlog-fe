@@ -13,13 +13,13 @@ const Footer: React.FC = () => {
         {
           key: 'FedLog',
           title: 'FedLog',
-          href: 'https://github.com/yzzer123/FedLog',
+          href: 'https://github.com/yzzer/FedLog',
           blankTarget: true,
         },
         {
           key: 'github',
           title: <GithubOutlined />,
-          href: 'https://github.com/yzzer123/FedLog',
+          href: 'https://github.com/yzzer/FedLog',
           blankTarget: true,
         },
         {
