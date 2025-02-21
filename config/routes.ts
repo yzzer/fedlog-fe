@@ -17,249 +17,193 @@ export default [
     path: '/welcome',
     component: 'Welcome',
   },
+  
+  // 项目管理
   {
-    path: '/user',
-    layout: false,
+    path: '/project-manage',
+    name: '项目管理',
+    icon: 'project',
     routes: [
       {
-        path: '/user/login',
+        path: '/project-manage/create',
+        name: 'create',
+        component: './project-manage/create',
+        hideInMenu: true,
+      },
+      {
+        path: '/project-manage/projectinfo',
+        name: '项目设置',
+        routes: [
+          {
+            path: '/project-manage/projectinfo/members',
+            name: '项目配置修改',
+            component: './project-manage/projectinfo/members',
+          },
+          {
+            path: '/project-manage/projectinfo/federated-queues',
+            name: '联邦队列管理',
+            component: './project-manage/projectinfo/federated-queues',
+          },
+          {
+            path: '/project-manage/projectinfo/app-queues',
+            name: '应用队列管理',
+            component: './project-manage/projectinfo/app-queues',
+          },
+        ],
+      },
+      {
+        path: '/project-manage/queues-apply',
+        name: '联邦队列申请',
+        component: './project-manage/queues-apply',
+      },
+    ],
+  },
+
+  // 联邦日志解析
+  {
+    path: '/federated-log',
+    name: 'federated-log',
+    icon: 'ContainerOutlined',
+    routes: [
+      {
+        path: '/federated-log/tasks',
+        name: 'tasks',
+        component: './federated-log/tasks',
+      },
+      {
+        path: '/federated-log/task-create',
+        name: 'task-create',
+        hideInMenu: true,
         layout: false,
-        name: 'login',
-        component: './user/login',
+        component: './federated-log/task-create',
+      },
+      {
+        path: '/federated-log/task/:id',
+        name: 'task-detail',
+        component: './federated-log/tasks/detail',
+        hideInMenu: true,
+      },
+      {
+        path: '/federated-log/templates',
+        name: 'templates',
+        component: './federated-log/templates',
+      },
+    ],
+  },
+
+  // 模型训练
+  {
+    path: '/model-training',
+    name: 'model-training',
+    icon: 'experiment',
+    routes: [
+      {
+        path: '/model-training/code-repo',
+        name: 'code-repo',
+        component: './model-training/code-repo',
+      },
+      {
+        path: '/model-training/training-tasks',
+        name: 'training-tasks',
+        component: './model-training/training-tasks',
+      },
+      {
+        path: '/model-training/task-create',
+        name: 'task-create',
+        hideInMenu: true,
+        component: './model-training/task-create',
+      },
+      {
+        path: '/model-training/models',
+        name: 'models',
+        component: './model-training/models',
+      },
+    ],
+  },
+
+  // 异常检测服务
+  {
+    path: '/detection-service',
+    name: 'detection-service',
+    icon: 'DeploymentUnitOutlined',
+    routes: [
+      {
+        path: '/detection-service/encoding-tasks',
+        name: 'encoding-tasks',
+        component: './detection-service/encoding-tasks',
+      },
+      {
+        path: '/detection-service/detection-deploy',
+        name: 'detection-deploy',
+        component: './detection-service/detection-deploy',
+      },
+      {
+        path: '/detection-service/gray-release',
+        name: 'gray-release',
+        component: './detection-service/gray-release',
+      },
+    ],
+  },
+
+  // 监控中心
+  {
+    path: '/monitoring',
+    name: 'monitoring',
+    icon: 'dashboard',
+    routes: [
+      {
+        path: '/monitoring/dashboard',
+        name: 'dashboard',
+        component: './monitoring/dashboard',
+      },
+      {
+        path: '/monitoring/alarm-config',
+        name: 'alarm-config',
+        component: './monitoring/alarm-config',
+      },
+      {
+        path: '/monitoring/log-investigation',
+        name: 'log-investigation',
+        component: './monitoring/log-investigation',
+        hideInMenu: true,
+      },
+    ],
+  },
+
+  // 个人中心
+  {
+    path: '/user',
+    name: 'user',
+    icon: 'user',
+    routes: [
+      {
+        path: '/user/notifications',
+        name: 'notifications',
+        component: './user/notifications',
+      },
+      {
+        path: '/user/access-requests',
+        name: 'access-requests',
+        component: './user/access-requests',
       },
       {
         path: '/user',
         redirect: '/user/login',
       },
-      {
-        name: 'register-result',
-        icon: 'smile',
-        path: '/user/register-result',
-        component: './user/register-result',
-      },
-      {
-        name: 'register',
-        icon: 'smile',
-        path: '/user/register',
-        component: './user/register',
-      },
-      {
-        component: '404',
-        path: '/user/',
-      },
     ],
   },
   {
-    path: '/dashboard',
-    name: 'dashboard',
-    icon: 'dashboard',
+    path: '/user/login',
+    layout: false,
+    name: 'login',
+    component: './account/login',
+    hideInMenu: true,
+    hideInBreadcrumb: true,
+    hideInTab: true,
     routes: [
       {
-        path: '/dashboard',
-        redirect: '/dashboard/analysis',
-      },
-      {
-        name: 'analysis',
-        icon: 'smile',
-        path: '/dashboard/analysis',
-        component: './dashboard/analysis',
-      },
-      {
-        name: 'monitor',
-        icon: 'smile',
-        path: '/dashboard/monitor',
-        component: './dashboard/monitor',
-      },
-      {
-        name: 'workplace',
-        icon: 'smile',
-        path: '/dashboard/workplace',
-        component: './dashboard/workplace',
-      },
-    ],
-  },
-  {
-    path: '/form',
-    icon: 'form',
-    name: 'form',
-    routes: [
-      {
-        path: '/form',
-        redirect: '/form/basic-form',
-      },
-      {
-        name: 'basic-form',
-        icon: 'smile',
-        path: '/form/basic-form',
-        component: './form/basic-form',
-      },
-      {
-        name: 'step-form',
-        icon: 'smile',
-        path: '/form/step-form',
-        component: './form/step-form',
-      },
-      {
-        name: 'advanced-form',
-        icon: 'smile',
-        path: '/form/advanced-form',
-        component: './form/advanced-form',
-      },
-    ],
-  },
-  {
-    path: '/list',
-    icon: 'table',
-    name: 'list',
-    routes: [
-      {
-        path: '/list/search',
-        name: 'search-list',
-        component: './list/search',
-        routes: [
-          {
-            path: '/list/search',
-            redirect: '/list/search/articles',
-          },
-          {
-            name: 'articles',
-            icon: 'smile',
-            path: '/list/search/articles',
-            component: './list/search/articles',
-          },
-          {
-            name: 'projects',
-            icon: 'smile',
-            path: '/list/search/projects',
-            component: './list/search/projects',
-          },
-          {
-            name: 'applications',
-            icon: 'smile',
-            path: '/list/search/applications',
-            component: './list/search/applications',
-          },
-        ],
-      },
-      {
-        path: '/list',
-        redirect: '/list/table-list',
-      },
-      {
-        name: 'table-list',
-        icon: 'smile',
-        path: '/list/table-list',
-        component: './table-list',
-      },
-      {
-        name: 'basic-list',
-        icon: 'smile',
-        path: '/list/basic-list',
-        component: './list/basic-list',
-      },
-      {
-        name: 'card-list',
-        icon: 'smile',
-        path: '/list/card-list',
-        component: './list/card-list',
-      },
-    ],
-  },
-  {
-    path: '/profile',
-    name: 'profile',
-    icon: 'profile',
-    routes: [
-      {
-        path: '/profile',
-        redirect: '/profile/basic',
-      },
-      {
-        name: 'basic',
-        icon: 'smile',
-        path: '/profile/basic',
-        component: './profile/basic',
-      },
-      {
-        name: 'advanced',
-        icon: 'smile',
-        path: '/profile/advanced',
-        component: './profile/advanced',
-      },
-    ],
-  },
-  {
-    name: 'result',
-    icon: 'CheckCircleOutlined',
-    path: '/result',
-    routes: [
-      {
-        path: '/result',
-        redirect: '/result/success',
-      },
-      {
-        name: 'success',
-        icon: 'smile',
-        path: '/result/success',
-        component: './result/success',
-      },
-      {
-        name: 'fail',
-        icon: 'smile',
-        path: '/result/fail',
-        component: './result/fail',
-      },
-    ],
-  },
-  // {
-  //   name: 'exception',
-  //   icon: 'warning',
-  //   path: '/exception',
-  //   routes: [
-  //     {
-  //       path: '/exception',
-  //       redirect: '/exception/403',
-  //     },
-  //     {
-  //       name: '403',
-  //       icon: 'smile',
-  //       path: '/exception/403',
-  //       component: './exception/403',
-  //     },
-  //     {
-  //       name: '404',
-  //       icon: 'smile',
-  //       path: '/exception/404',
-  //       component: './exception/404',
-  //     },
-  //     {
-  //       name: '500',
-  //       icon: 'smile',
-  //       path: '/exception/500',
-  //       component: './exception/500',
-  //     },
-  //   ],
-  // },  
-  {
-    name: 'account',
-    icon: 'user',
-    path: '/account',
-    routes: [
-      {
-        path: '/account',
-        redirect: '/account/center',
-      },
-      {
-        name: 'center',
-        icon: 'smile',
-        path: '/account/center',
-        component: './account/center',
-      },
-      {
-        name: 'settings',
-        icon: 'smile',
-        path: '/account/settings',
-        component: './account/settings',
+        path: '/user/login',
+        redirect: '/user/login',
       },
     ],
   },

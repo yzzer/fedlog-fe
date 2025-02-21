@@ -7,21 +7,21 @@ export default {
   'menu.login': '登录',
   'menu.register': '注册',
   'menu.register-result': '注册结果',
-  'menu.dashboard': 'Dashboard',
-  'menu.dashboard.analysis': '分析页',
-  'menu.dashboard.monitor': '监控页',
-  'menu.dashboard.workplace': '工作台',
+  'menu.dashboard': '异常监控',
+  'menu.dashboard.analysis': 'Dashboard',
+  'menu.dashboard.monitor': '日志洞察',
+  'menu.dashboard.workplace': '日志分析',
   'menu.exception.403': '403',
   'menu.exception.404': '404',
   'menu.exception.500': '500',
-  'menu.form': '表单页',
+  'menu.form': '模型训练',
   'menu.form.basic-form': '基础表单',
   'menu.form.step-form': '分步表单',
   'menu.form.step-form.info': '分步表单（填写转账信息）',
   'menu.form.step-form.confirm': '分步表单（确认转账信息）',
   'menu.form.step-form.result': '分步表单（完成）',
   'menu.form.advanced-form': '高级表单',
-  'menu.list': '列表页',
+  'menu.list': '模型部署',
   'menu.list.table-list': '查询表格',
   'menu.list.basic-list': '标准列表',
   'menu.list.card-list': '卡片列表',
@@ -40,7 +40,7 @@ export default {
   'menu.exception.not-find': '404',
   'menu.exception.server-error': '500',
   'menu.exception.trigger': '触发错误',
-  'menu.account': '个人页',
+  'menu.account': '个人',
   'menu.account.center': '个人中心',
   'menu.account.settings': '个人设置',
   'menu.account.trigger': '触发报错',
@@ -49,4 +49,44 @@ export default {
   'menu.editor.flow': '流程编辑器',
   'menu.editor.mind': '脑图编辑器',
   'menu.editor.koni': '拓扑编辑器',
+
+  // 项目管理
+  'menu.project-manage': '项目管理',
+  'menu.project-manage.create': '项目创建',
+  'menu.project-manage.projectinfo': '项目详情',
+  'menu.project-manage.projectinfo.members': '成员管理',
+  'menu.project-manage.projectinfo.federated-queues': '联邦队列管理',
+  'menu.project-manage.projectinfo.app-queues': '应用队列管理',
+  'menu.project-manage.queues-apply': '队列权限申请',
+
+  // 联邦日志解析
+  'menu.federated-log': '联邦日志解析',
+  'menu.federated-log.tasks': '解析任务列表',
+  'menu.federated-log.task-create': '任务创建向导',
+  'menu.federated-log.task-detail': '任务详情',
+  'menu.federated-log.templates': '模板集管理',
+
+  // 模型训练
+  'menu.model-training': '模型训练',
+  'menu.model-training.code-repo': '模型代码仓库',
+  'menu.model-training.training-tasks': '训练任务列表',
+  'menu.model-training.task-create': '任务创建',
+  'menu.model-training.models': '模型产物管理',
+
+  // 异常检测服务
+  'menu.detection-service': '异常检测服务',
+  'menu.detection-service.encoding-tasks': '编码任务部署',
+  'menu.detection-service.detection-deploy': '检测服务部署',
+  'menu.detection-service.gray-release': '灰度管理',
+
+  // 监控中心
+  'menu.monitoring': '监控中心',
+  'menu.monitoring.dashboard': '综合监控面板',
+  'menu.monitoring.alarm-config': '告警配置',
+  'menu.monitoring.log-investigation': '异常日志探查',
+
+  // 个人中心
+  'menu.user': '个人中心',
+  'menu.user.notifications': '消息通知',
+  'menu.user.access-requests': '权限申请记录',
 };
